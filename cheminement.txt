@@ -1,0 +1,52 @@
+wilder@wilder-ThinkPad-T440p:~$ mkdir gitRemote
+wilder@wilder-ThinkPad-T440p:~$ cd gitRemote/
+wilder@wilder-ThinkPad-T440p:~/gitRemote$ git clone https://github.com/dcirlan/my-super-website.git
+Clonage dans 'my-super-website'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Dépaquetage des objets: 100% (6/6), 1.29 Kio | 1.29 Mio/s, fait.
+wilder@wilder-ThinkPad-T440p:~/gitRemote$ ls
+my-super-website
+wilder@wilder-ThinkPad-T440p:~/gitRemote$ cd my-super-website/
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ ls
+index.html  README.md
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ nano index.html 
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ git status
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+
+Modifications qui ne seront pas validées :
+  (utilisez "git add <fichier>..." pour mettre à jour ce qui sera validé)
+  (utilisez "git restore <fichier>..." pour annuler les modifications dans le répertoire de travail)
+	modifié :         index.html
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ git add -A
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ git commit -m "challenge gitRemote"
+[master c534ecb] challenge gitRemote
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ git status
+Sur la branche master
+Votre branche est en avance sur 'origin/master' de 1 commit.
+  (utilisez "git push" pour publier vos commits locaux)
+
+rien à valider, la copie de travail est propre
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ git push origin master
+Username for 'https://github.com': dcirlan
+Password for 'https://dcirlan@github.com': 
+Énumération des objets: 5, fait.
+Décompte des objets: 100% (5/5), fait.
+Compression par delta en utilisant jusqu'à 4 fils d'exécution
+Compression des objets: 100% (3/3), fait.
+Écriture des objets: 100% (3/3), 343 octets | 343.00 Kio/s, fait.
+Total 3 (delta 1), réutilisés 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dcirlan/my-super-website.git
+   b42a757..c534ecb  master -> master
+wilder@wilder-ThinkPad-T440p:~/gitRemote/my-super-website$ git status
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+
+rien à valider, la copie de travail est propre
